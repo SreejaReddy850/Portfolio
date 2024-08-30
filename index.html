@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRIJA CHADA - Portfolio</title>
+    
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SmlepAaK1gPxyjN08FnttIepN24dzU3VQQmG/A7FmY0llAkhFQV6M1ToVHr4uTkX" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
     <style>
-        /* Global styles */
+        /* Global styles#3e0361 #43037a*/
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,7 +24,7 @@
         }
 
         header {
-            background-color: #003366;
+            background-color: #022552;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -31,13 +39,16 @@
         }
 
         header nav {
-            width: 90%;
+            width: 100%; /* Make the nav take full width */
+    display: flex;
+    justify-content: center; /* Center the nav content */
         }
 
         header nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
             text-align: center;
         }
 
@@ -71,10 +82,10 @@
             text-align: left;
         }
 
-        /* About section */
+        /* About section #f2dce4 */
         #about {
             display: flex;
-            background-color: #fce4ec;
+            background-color: #f2bed0ee;
             
             justify-content: space-between;
             align-items: center;
@@ -96,42 +107,162 @@
 
 
         /* Education section */
-        #education:hover {
-            background-color: #f1e8f5;
-            transition: background-color 0.3s ease;
-        }
-            
-        #education .education-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #education .education-item {
-            
-           background-color: #fff3e0;
-            width: 23%;
+        #education {
             padding: 20px;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #d3edf0; /*  background color */
+            color: #000; /* Black text color */
         }
+.education-title {
+    text-align: left;
+    margin-bottom: 50px;
+}
 
-        #education .education-item h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+.education-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.education-item {
+    background-color: #ede2cf;
+    width: 23%; /* 23% width for desktop */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff; /* White text color for contrast */
+    background-color: #46b7c1; /* Highlighted background color */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center the heading text */
+}
+
+        
+
+/* Scrollable content within each box */
+.scroll-container {
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.scroll-content {
+    padding: 0;
+    margin: 0;
+    list-style-type: disc; /* Adds pointers (bullet points) to the list items */
+    padding-left: 20px; /* Ensures bullets are indented properly */
+    text-align: left; /* Aligns the content to the left */
+}
+
+/* Add hover effect to highlight the box */
+.education-item:hover {
+    background-color: #f0d8ec;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-item {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+}
+
+/* General box styling for all sections */
+.event {
+    width: 30%;
+    margin-right: 4%;
+    float: left;
+    background-color: #fff;
+    padding: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #46b7c1;
+    border-radius: 10px;
+}
+
+/* Heading style for all sections */
+.event .heading {
+    border-bottom: 1px solid #46b7c1;
+    padding: 5px;
+    color: #fff;
+    background: #46b7c1;
+    text-align: center;
+}
+
+/* Scroll container */
+.scroll-container {
+    max-height: 150px;
+    overflow: hidden;
+}
+
+/* Animation for scrolling content */
+.scroll-content {
+    animation: scroll 20s linear forwards, fadeIn 3s ease-in-out forwards, showInfo 0.5s ease-in-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(calc(-100% - 30px));
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showInfo {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
         /* Experience section */
-       
+        #experience {
+            padding: 20px;
+            background-color: #aef0c7ee; /*  background color */
+            color: #000; /* Black text color */
+        }
         #experience:hover {
-            background-color: #e8f5e9;
+            background-color: #e4c5ec;
             transition: background-color 0.3s ease;
         }
+        
 
-        /* Projects section */
-        #projects:hover {
+       /* Projects section */
+       #projects {
             background-color: #e8f5e9;
+        }
+
+       #projects:hover {
+            background-color: #e4c5ec;
             transition: background-color 0.3s ease;
         }
         #projects .project {
@@ -143,18 +274,23 @@
         #projects .project:nth-child(odd) {
             flex-direction: row-reverse;
         }
-
         #projects .project img {
-            background-color: #ede9a9;
-            width: 40%;
+            width: 100%; /* Adjust the size as needed */
             height: auto;
             border-radius: 10px;
-            margin-left: 20px;
+            padding-right: 500px; /* Add space inside the image container */
         }
-
+        #projects .project .text {
+            margin-left: 20px; /* Add space to the left of the text */
+        }
         /* Skills section */
+        #skills:hover {
+            background-color: #e4c5ec;
+            transition: background-color 0.3s ease;
+        }
+           
         #skills table {
-            background-color: #b9f4ee;
+            background-color: #cdf5f1;
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
@@ -170,23 +306,47 @@
             background-color: #f2f2f2;
         }
          /* certification section */
-        #certificate {
-            background-color: #f0f0f0 !important;
-            color: #333 !important;
+         .certifications {
+            padding: 20px;
+            background-color: #f3e6d0; /*  background color */
+            color: #000; /* Black text color */
+        }
+        #certifications:hover {
+            background-color: #e4c5ec;
+            transition: background-color 0.3s ease;
         }
 
+        .certifications a {
+            color: #000; /* Black text color for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-
-        
-        
-        #contact  {
-            background-color: #e4f4c1f7;
+         /* contact section */
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px; /* Space between the boxes */
+        }
+        #contact:hover {
+    background-color: #e4c5ec; /* Pink color for hover e8f5e9 */
+    transition: background-color 0.3s ease;
+}
+        .contact-box {
+            flex: 1;
+            background-color: #c7ebc9; /* Yellow color */
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 30%;
         }
 
 
         /* Footer styles */
         footer {
-            background-color: #003366;
+            background-color: #022552;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -198,23 +358,24 @@
         <h1>SRIJA CHADA</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i></a></li>
+                <li><a href="#skills"><i class="fas fa-laptop-code"></i></a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i></a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#certifications"><i class="fas fa-certificate"></i></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
         <div class="text">
-            <h1>About </h1>
+            <h2><i class="fas fa-user"></i>  About</h2>
             <h2 class="text-white mb-4">Let me introduce myself</h2>
-            <p>Hello, I'm Srija Chada, “Master's graduate in Computer and Information Sciences with a solid foundation in Software Engineering Principles and Practices. 
+            <p>Hello....!<p>
+            <p> I'm Srija Chada, “Master's graduate in Computer and Information Sciences with a solid foundation in Software Engineering Principles and Practices. 
                 With 7 months of experience as a Graduate Research Assistant. </p><p>Proficient in Python, .NET-C#, PHP, JS, CSS, HTML, Java, and C. Strong analytical and problem-solving skills developed through coursework and hands-on projects.
                 I am actively seeking opportunities to apply my skills in a professional setting. I am excited to take on a challenging role that will push my professional limits and help me grow my skills.
             </p>
@@ -223,7 +384,7 @@
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
+        <h2><i class="fas fa-laptop-code"></i> Skills</h2>
         <table>
             <tr><td>Programming Languages</td><td>Python, Java</td></tr>
             <tr><td>Database</td><td>MySQL</td></tr>
@@ -235,7 +396,7 @@
     </section>
 
     <section id="experience">
-        <h2>Experience</h2>
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
         <p style="color: deeppink">UNIVERSITY OF SOUTH ALABAMA</p>
                                                 <p style="color:green">GRADUATE RESEARCH ASSISTANT |
                                                 <i style="color: darkblue">January, 2022 - July, 2022</i></p>
@@ -262,114 +423,142 @@
                                         
                                                     
     </section>
+    
 
-    <section id="education">
-        <h2>Education</h2>
+    <section id="education"> 
+        <h2 class="education-title"><i class="fas fa-graduation-cap"></i> Education</h2>
         <div class="education-container">
-            <div class="education-item">
-                <h3>Masters</h3>
+            <div class="event">
+                <div class="heading">Masters</div>
                 <div class="scroll-container">
                     <ul class="scroll-content">
                         <li><i>University of South Alabama</i></li>
-                        <li>Masters in Computer Information Sciences</li>
+                        <li><i>Masters in Computer Information Sciences</i></li>
                         <li><i>Jan, 2022 - Dec, 2023</i></li>                                            
-                        <li>GPA: 3.56 / 4.0</li>
+                        <li><i>GPA: 3.56 / 4.0</i></li>
                     </ul>
                 </div>
             </div>
-            <div class="education-item">
-                <h3>Bachelors</h3>
+            <div class="event">
+                <div class="heading">Bachelors</div>
                 <div class="scroll-container">
                     <ul class="scroll-content">
-                        <li><i>Malla Reddy Institute of Engineering and Technology, Hyderabad.</i></li>
-                        <li>Bachelors in Computer Science Engineering</li>
+                        <li><i>Malla Reddy Institute of Engineering and Technology</i></li>
+                        <li><i>Bachelors in Computer Science Engineering</i></li>
                         <li><i>2018 - 2021</i></li> 
-                        <li>GPA: 7.2 / 10.0</li>
+                        <li><i>GPA: 7.2 / 10.0</i></li>
                     </ul>
                 </div>
             </div>
-            <div class="education-item">
-                <h3>Diploma</h3>
+            <div class="event">
+                <div class="heading">Diploma</div>
                 <div class="scroll-container">
                     <ul class="scroll-content">
-                        <li><i>Balaji Institute of Technology and Science, Warangal.</i></li>
-                        <li>Diploma in  Electrical Electronics Engineering</li>
+                        <li><i>Balaji Institute of Technology and Science</i></li>
+                        <li><i>Diploma in Electrical Electronics Engineering</i></li>
                         <li><i>2015 - 2018</i></li>                                            
-                        <li>GPA: 8.5 / 10.0</li>
+                        <li><i>GPA: 8.5 / 10.0</i></li>
                     </ul>
                 </div>
             </div>
-            <div class="education-item">
-                <h3>High School</h3>
-                <ul class="scroll-content">
-                    <li><i>Pathfinder Techno School, Warangal.</i></li>
-                    <li>SSC(High School)</li>
-                    <li><i>2011 - 2015</i></li> 
-                    <li>GPA: 9.2 / 10.0</li>                                           
-                </ul>
+            <div class="event">
+                <div class="heading">High School</div>
+                <div class="scroll-container">
+                    <ul class="scroll-content">
+                        <li><i>Pathfinder Techno School</i></li>
+                        <li><i>SSC(High School)</i></li>
+                        <li><i>2011 - 2015</i></li> 
+                        <li><i>GPA: 9.2 / 10.0</i></li>                                           
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-
+    </div>
+    </div>
     <section id="projects">
-        <h2>Projects</h2>
-        <section class="projects-section bg-light">
-            <div class="row gx-0 mb-4 mb-5 align-items-right">
-                <div class="col-lg-6 text-left">
-                    <h4>Community Resources</h4>
-                    <p class="text-black-50 mb-0">Developed an ASP.net web application for the welfare of locals to provide easy access to local and government events. It is a public website that allows you to search for all events based on a zipcode and Resource types.</p>
-                </div>
-                <div class="col-lg-6 text-right">
-                    <img class="img-fluid" src="image/resources.png" alt="Community Resources" style="max-width: 40%; height: auto;">
-                </div>
+        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+        
+        <!-- Project 1 -->
+        <div class="project">
+            <div class="text">
+                <h3>Community Resources</h3>
+                <p class="text-black-50 mb-0">Developed an ASP.net web application for the welfare of locals to provide easy access to local and government events. It is a public website that allows you to search for all events based on a zipcode and Resource types.</p>
             </div>
-            <div class="row gx-0 mb-4 mb-5 align-items-center">
-                <div class="col-lg-6 text-right">
-                    <h4>Community Resources</h4>
-                    <p class="text-black-50 mb-0">Designing my professional portfolio website integrates user-friendly navigation with modern aesthetics using HTML and CSS. The responsive layout ensures a consistent, polished look across devices, while dynamic visuals and interactive elements enhance user engagement. The portfolio not only showcases my skills and experience but also reflects my commitment to quality and design excellence.</p>
-                </div>
-                <div class="col-lg-6 text-left">
-                    <img class="img-fluid" src="image/portfolio.png.png" alt="Portfolio" style="max-width: 40%; height: auto;">
-                </div>
+            <div class="image">
+                <img src="image/resources.png" alt="Project 2 Image">
             </div>
-            <div class="row gx-0 mb-4 mb-5 align-items-center">
-                <div class="col-lg-6 text-right">
-                    <h4>PICU/AdmitLog</h4>
-                    <p class="text-black-50 mb-0">Designing my professional portfolio website integrates user-friendly navigation with modern aesthetics using HTML and CSS. The responsive layout ensures a consistent, polished look across devices, while dynamic visuals and interactive elements enhance user engagement. The portfolio not only showcases my skills and experience but also reflects my commitment to quality and design excellence.</p>
-                </div>
-                <div class="col-lg-6 text-left">
-                    <img class="img-fluid" src="image/portfolio.png.png" alt="Portfolio" style="max-width: 40%; height: auto;">
-                </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project">
+            <div class="text">
+                <h3>PICU/AdmitLog</h3>
+                <p class="text-black-50 mb-0">PICU Admit Log application, a comprehensive and efficient system developed using the .NET MVC (Model-View-Controller) structure. This application serves as a powerful tool for managing and tracking patient admissions and procedures in the Pediatric Intensive Care Unit (PICU). With its user-friendly interface and robust features, it streamlines the process of documenting and monitoring patient care, ensuring accurate and timely information for healthcare professionals.
+                </p>
             </div>
-        </section>
-    </section>
-
+            <div class="image">
+                <img src="image/PicuLog.png" alt="Project 1 Image">
+            </div>
+        </div>
+        <div class="project">
+            <div class="text">
+                <h3>Portfolio</h3>
+                <p class="text-black-50 mb-0">Designing my professional portfolio website integrates user-friendly navigation with modern aesthetics using HTML and CSS. The responsive layout ensures a consistent, polished look across devices, while dynamic visuals and interactive elements enhance user engagement. The portfolio not only showcases my skills and experience but also reflects my commitment to quality and design excellence.</p>
+            </div>
+            <div class="image">
+                <img src="image/portfolio.png.png" alt="Project 1 Image">
+            </div>
+        </div>
+        
+    
+        <!-- Add more projects as needed -->
+    </section>    
     <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Awarded certification of participation for successful completion of workshop Python.</li><a href="certificate-link1">Certificate 1</a>
-            <li>Awarded certification of participation in Technical Hunt at Techzeal-18 organized by Technical Club at Balaji Institute of Technology & Science.</li><a href="certificate-link1">Certificate 1</a>
-            <li>Awarded certification of participation for successful completion of Advanced Python Course at RN Reddy IT School.</li><a href="certificate-link1">Certificate 1</a>
-        </ul>
+        <div class="certifications">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <ul>
+                <li>Issued certification of participation for successful completion of workshop Python.</li><a href="certificate-link1">Certificate 1</a>
+                <li>Issued certification of participation in Technical Hunt at Techzeal-18 organized by Technical Club at Balaji Institute of Technology & Science.</li><a href="certificate-link1">Certificate 1</a>
+                <li>Issued certification of participation for successful completion of Advanced Python Course at RN Reddy IT School.</li><a href="certificate-link1">Certificate 1</a>
+            </ul>
+          </div>
+        
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            <strong>Email:</strong> srijachada4@gmail.com<br>
-            <strong>Phone:</strong> +1(251)-373-6506<br>
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/srija-reddy-931a47192/"> Click here</a> <br>
-            <strong>Mailing Address:</strong> 
-        </p>
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
+        <br><br>
+        <div class="contact-container">
+            <div class="contact-box">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">351 Azalea rd Mobile, AL, 36609</div>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50"><a href="#!">srijachada4@gmail.com</a></div>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-phone text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">+1 251-373-6506</div>
+            </div>
+        </div>
     </section>
-
+    
+    
 
     <footer>
-        <p>&copy; 2024 Srija Chada. All rights reserved.</p>
+        
+        <p>2024 Copyright &copy; Srija Chada. </p>
         <ul class="social-icons">
             
-            <li><a href="https://www.linkedin.com/in/venkatreddy-v33/" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="https://www.linkedin.com/in/srija-reddy-931a47192/" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="LinkedIn"></a></li>
             <li><a href="https://github.com/SreejaReddy850" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub"></a></li>
-            <li><a href="https://www.facebook.com/srijareddy.chada?mibextid=JRoKGi "><img src="https://img.icons8.com/fluency/48/000000/twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://x.com/srijareddychada?s=11"><img src="https://img.icons8.com/fluency/48/000000/twitter.png" alt="Twitter"></a></li>
             <li><a href="https://www.instagram.com/sreeravinder_reddy/" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram"></a></li>
             <li><a href="https://www.facebook.com/srijareddy.chada?mibextid=JRoKGi" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png" alt="Facebook"></a></li>
             
