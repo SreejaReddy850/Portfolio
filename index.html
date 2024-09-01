@@ -257,32 +257,39 @@
         
 
        /* Projects section */
-       #projects {
-            background-color: #e8f5e9;
-        }
+       #projects .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Adjust content placement */
+}
 
-       #projects:hover {
-            background-color: #e4c5ec;
-            transition: background-color 0.3s ease;
-        }
-        #projects .project {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+#projects .project img {
+    width: 100%; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0; /* Add space around the image */
+}
 
-        #projects .project:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-        #projects .project img {
-            width: 100%; /* Adjust the size as needed */
-            height: auto;
-            border-radius: 10px;
-            padding-right: 500px; /* Add space inside the image container */
-        }
-        #projects .project .text {
-            margin-left: 20px; /* Add space to the left of the text */
-        }
+#projects .project:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    #projects .project {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
+
+    #projects .project:nth-child(odd) {
+        flex-direction: column; /* Stack odd projects vertically too */
+    }
+
+    #projects .project img {
+        margin: 0 auto; /* Center the image */
+    }
+}
+
         /* Skills section */
         #skills:hover {
             background-color: #e4c5ec;
@@ -328,6 +335,10 @@
     justify-content: space-between;
     gap: 40px; /* Space between the boxes */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+        #contact:hover {
+    background-color: #e4c5ec; /* Pink color for hover e8f5e9 */
+    transition: background-color 0.3s ease;
 }
 
 .contact-box {
