@@ -275,15 +275,15 @@
     align-items: center;
     gap: 30px; /* Ensure the same gap for odd-numbered projects */
 }
-#projects .project .image img {
-    max-width: 100%; /* Ensure image doesn't overflow its container */
-    max-height: 300px; /* Adjust as needed */
-}
-
-#projects .project .text {
-    padding: 10px; /* Add padding to ensure text is not too close to the edges */
-}
-
+ #projects .project img {
+            width: 100%; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 10px;
+            padding-right: 500px; /* Add space inside the image container */
+        }
+        #projects .project .text {
+            margin-left: 20px; /* Add space to the left of the text */
+        }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
