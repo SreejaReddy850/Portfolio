@@ -257,8 +257,7 @@
         
 
        /* Projects section */
-       /* Projects Section Styling */
-#projects {
+      #projects {
     background-color: #e8f5e9;
     padding: 50px 20px; /* Added padding for better spacing */
 }
@@ -272,21 +271,21 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    gap: 20px; /* Space between image and text */
+    gap: 30px; /* Increased space between image and text */
 }
 
 /* Alternating layout for odd-numbered projects */
 #projects .project:nth-child(odd) {
     flex-direction: row-reverse;
+    gap: 30px; /* Ensure the same gap for odd-numbered projects */
 }
 
 /* Image Styling */
 #projects .project img {
-    width: 80%; /* Adjusted to take up half the container */
+    width: 85%; /* Increase image size */
     height: auto;
     border-radius: 10px;
     object-fit: cover; /* Ensures the image covers the container without distortion */
-    /* Removed large padding-right */
 }
 
 /* Text Container Styling */
