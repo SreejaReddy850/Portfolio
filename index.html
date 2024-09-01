@@ -112,80 +112,74 @@
             background-color: #d3edf0; /*  background color */
             color: #000; /* Black text color */
         }
-.education-title {
-    text-align: left;
-    margin-bottom: 50px;
-}
+        .education-title {
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .education-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .education-item { 
+            background-color: #ede2cf;
+            width: 23%; /* 23% width for desktop */
+            padding: 20px;
+            text-align: left; /* Align text to the left */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .education-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #fff; /* White text color for contrast */
+            background-color: #46b7c1; /* Highlighted background color */
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center; /* Center the heading text */
+        }
+        /* Scrollable content within each box */
+        .scroll-container {
+            max-height: 150px;
+            overflow: hidden;
+        }
+        .scroll-content {
+            padding: 0;
+            margin: 0;
+            list-style-type: disc; /* Adds pointers (bullet points) to the list items */
+            padding-left: 20px; /* Ensures bullets are indented properly */
+            text-align: left; /* Aligns the content to the left */
+        }
+        /* Add hover effect to highlight the box */
+        .education-item:hover {
+            background-color: #f0d8ec;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .education-item {
+                width: 100%; /* Full width on smaller screens */
+                max-width: 100%; /* Ensure full width on smaller screens */
+            }
+        }
+        /* General box styling for all sections */
+        .event {
+            width: 30%;
+            margin-right: 4%;
+            float: left;
+            background-color: #fff;
+            padding: 10px;
+            padding-bottom: 10px;
+            border: 1px solid #46b7c1;
+            border-radius: 10px;
+        }
 
-.education-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.education-item {
-    background-color: #ede2cf;
-    width: 23%; /* 23% width for desktop */
-    padding: 20px;
-    text-align: left; /* Align text to the left */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.education-item h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #fff; /* White text color for contrast */
-    background-color: #46b7c1; /* Highlighted background color */
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center; /* Center the heading text */
-}
-/* Scrollable content within each box */
-.scroll-container {
-    max-height: 150px;
-    overflow: hidden;
-}
-.scroll-content {
-    padding: 0;
-    margin: 0;
-    list-style-type: disc; /* Adds pointers (bullet points) to the list items */
-    padding-left: 20px; /* Ensures bullets are indented properly */
-    text-align: left; /* Aligns the content to the left */
-}
-
-/* Add hover effect to highlight the box */
-.education-item:hover {
-    background-color: #f0d8ec;
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .education-item {
-        width: 100%; /* Full width on smaller screens */
-        max-width: 100%; /* Ensure full width on smaller screens */
-    }
-}
-
-/* General box styling for all sections */
-.event {
-    width: 30%;
-    margin-right: 4%;
-    float: left;
-    background-color: #fff;
-    padding: 10px;
-    padding-bottom: 10px;
-    border: 1px solid #46b7c1;
-    border-radius: 10px;
-}
-
-/* Heading style for all sections */
-.event .heading {
+        /* Heading style for all sections */
+        .event .heading {
     border-bottom: 1px solid #46b7c1;
     padding: 5px;
     color: #fff;
