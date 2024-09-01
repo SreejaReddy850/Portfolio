@@ -257,6 +257,14 @@
         
 
        /* Projects section */
+        #projects {
+            background-color: #e8f5e9;
+        }
+
+       #projects:hover {
+            background-color: #e4c5ec;
+            transition: background-color 0.3s ease;
+        }
        #projects .project {
     display: flex;
     align-items: center;
@@ -330,16 +338,17 @@
         }
 
          /* contact section */
+           #contact:hover {
+    background-color: #e4c5ec; /* Pink color for hover e8f5e9 */
+    transition: background-color 0.3s ease;
+}
         .contact-container {
     display: flex;
     justify-content: space-between;
     gap: 40px; /* Space between the boxes */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-        #contact:hover {
-    background-color: #e4c5ec; /* Pink color for hover e8f5e9 */
-    transition: background-color 0.3s ease;
-}
+     
 
 .contact-box {
     flex: 1;
@@ -358,9 +367,6 @@
         margin-bottom: 20px; /* Add space between boxes on small screens */
     }
 }
-
-
-
         /* Footer styles */
         footer {
             background-color: #022552;
