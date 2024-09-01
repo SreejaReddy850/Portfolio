@@ -250,11 +250,9 @@
             transition: background-color 0.3s ease;
         }        
 
-       /* Projects section */
- /* Projects section */
-#projects {
+   #projects {
     background-color: #e8f5e9;
-    padding: 50px 50px; /* Added padding for better spacing */
+    padding: 50px 20px; /* Added padding for better spacing */
 }
 
 #projects:hover {
@@ -272,13 +270,12 @@
 /* Alternating layout for odd-numbered projects */
 #projects .project:nth-child(odd) {
     flex-direction: row-reverse;
-    align-items: center;
     gap: 30px; /* Ensure the same gap for odd-numbered projects */
 }
 
 /* Image Styling */
 #projects .project img {
-    width: 100%; /* Ensure image covers container width */
+    width: 85%; /* Increase image size */
     height: auto;
     border-radius: 10px;
     object-fit: cover; /* Ensures the image covers the container without distortion */
@@ -286,9 +283,8 @@
 
 /* Text Container Styling */
 #projects .project .text {
-    flex: 1; /* Ensures text takes up remaining space */
-    margin: 0; /* Reset margin */
-    text-align: center;
+    width: 50%; /* Takes up the remaining half */
+    margin-left: 0; /* Reset margin */
 }
 
 /* Responsive Adjustments */
@@ -296,6 +292,10 @@
     #projects .project {
         flex-direction: column; /* Stack vertically on smaller screens */
         text-align: center; /* Center-align text for better readability */
+    }
+
+    #projects .project:nth-child(odd) {
+        flex-direction: column; /* Ensure all projects stack vertically */
     }
 
     #projects .project img {
@@ -307,6 +307,7 @@
         width: 100%; /* Full width on mobile */
     }
 }
+
 
 
         /* Skills section */
