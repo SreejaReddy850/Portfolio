@@ -324,24 +324,30 @@
 
          /* contact section */
         .contact-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px; /* Space between the boxes */
-        }
-        #contact:hover {
-    background-color: #e4c5ec; /* Pink color for hover e8f5e9 */
-    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Space between the boxes */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-        .contact-box {
-            flex: 1;
-            background-color: #c7ebc9; /* Yellow color */
-            color: #333;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 30%;
-        }
+
+.contact-box {
+    flex: 1;
+    background-color: #c7ebc9; /* Yellow color */
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 30%; /* Maintain a max width */
+}
+
+@media (max-width: 768px) {
+    .contact-box {
+        max-width: 100%; /* Make contact boxes full width on small screens */
+        margin-bottom: 20px; /* Add space between boxes on small screens */
+    }
+}
+
 
 
         /* Footer styles */
