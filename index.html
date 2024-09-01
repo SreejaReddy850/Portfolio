@@ -257,44 +257,62 @@
         
 
        /* Projects section */
-        #projects {
-            background-color: #e8f5e9;
-        }
+       /* Projects Section Styling */
+#projects {
+    background-color: #e8f5e9;
+    padding: 50px 20px; /* Added padding for better spacing */
+}
 
-       #projects:hover {
-            background-color: #e4c5ec;
-            transition: background-color 0.3s ease;
-        }
-       #projects .project {
+#projects:hover {
+    background-color: #e4c5ec;
+    transition: background-color 0.3s ease;
+}
+
+#projects .project {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: space-between; /* Adjust content placement */
+    gap: 20px; /* Space between image and text */
 }
 
-#projects .project img {
-    width: 100%; /* Adjust the size as needed */
-    height: auto;
-    border-radius: 10px;
-    margin: 10px 0; /* Add space around the image */
-}
-
+/* Alternating layout for odd-numbered projects */
 #projects .project:nth-child(odd) {
     flex-direction: row-reverse;
 }
 
+/* Image Styling */
+#projects .project img {
+    width: 50%; /* Adjusted to take up half the container */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    /* Removed large padding-right */
+}
+
+/* Text Container Styling */
+#projects .project .text {
+    width: 50%; /* Takes up the remaining half */
+    margin-left: 0; /* Reset margin */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     #projects .project {
-        flex-direction: column; /* Stack content vertically on small screens */
+        flex-direction: column; /* Stack vertically on smaller screens */
+        text-align: center; /* Center-align text for better readability */
     }
 
     #projects .project:nth-child(odd) {
-        flex-direction: column; /* Stack odd projects vertically too */
+        flex-direction: column; /* Ensure all projects stack vertically */
     }
 
     #projects .project img {
-        margin: 0 auto; /* Center the image */
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 15px; /* Space below the image */
+    }
+
+    #projects .project .text {
+        width: 100%; /* Full width on mobile */
     }
 }
 
