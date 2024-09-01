@@ -251,7 +251,7 @@
         }        
 
        /* Projects section */
-   /* Projects section */
+ /* Projects section */
 #projects {
     background-color: #e8f5e9;
     padding: 50px 50px; /* Added padding for better spacing */
@@ -275,15 +275,21 @@
     align-items: center;
     gap: 30px; /* Ensure the same gap for odd-numbered projects */
 }
- #projects .project img {
-            width: 100%; /* Adjust the size as needed */
-            height: auto;
-            border-radius: 10px;
-            padding-right: 500px; /* Add space inside the image container */
-        }
-        #projects .project .text {
-            margin-left: 20px; /* Add space to the left of the text */
-        }
+
+/* Image Styling */
+#projects .project img {
+    width: 100%; /* Ensure image covers container width */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Text Container Styling */
+#projects .project .text {
+    flex: 1; /* Ensures text takes up remaining space */
+    margin: 0; /* Reset margin */
+    text-align: center;
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -301,7 +307,6 @@
         width: 100%; /* Full width on mobile */
     }
 }
-
 
 
         /* Skills section */
