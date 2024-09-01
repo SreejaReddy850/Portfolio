@@ -250,7 +250,8 @@
             transition: background-color 0.3s ease;
         }        
 
-   #projects {
+/* Projects section */
+     #projects {
     background-color: #e8f5e9;
     padding: 50px 50px; /* Added padding for better spacing */
 }
@@ -270,7 +271,8 @@
 /* Alternating layout for odd-numbered projects */
 #projects .project:nth-child(odd) {
     flex-direction: row-reverse;
-    gap: 60px; /* Ensure the same gap for odd-numbered projects */
+    align-items: center;
+    gap: 40px; /* Ensure the same gap for odd-numbered projects */
 }
 
 /* Image Styling */
@@ -283,8 +285,9 @@
 
 /* Text Container Styling */
 #projects .project .text {
-    width: 50%; /* Takes up the remaining half */
-    margin-left: 0; /* Reset margin */
+    width: 85%; /* Takes up the remaining half */
+    margin-left: 10; /* Reset margin */
+    text-align: center;
 }
 
 /* Responsive Adjustments */
@@ -307,9 +310,6 @@
         width: 100%; /* Full width on mobile */
     }
 }
-
-
-
         /* Skills section */
         #skills:hover {
             background-color: #e4c5ec;
