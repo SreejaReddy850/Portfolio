@@ -80,14 +80,18 @@
     
 </head>
 <body>
+    
     <div class="email-form">
         <h2>Submit Your Name and Email to View Portfolio</h2>
         <form id="emailForm" action="https://formspree.io/f/xjkbqqvl" method="POST">
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <input type="text" name="name" id="name" placeholder="Enter your full name" required>
             <input type="email" name="email" id="email" placeholder="Enter your email" required>
             <button type="submit">Submit</button>
+            <h6>Thank you for submitting your details! This information helps me understand the viewers of my portfolio. </h6>
         </form>
     </div>
+    
+ 
 
     <script>
         document.getElementById("emailForm").addEventListener("submit", function(event) {
@@ -115,5 +119,8 @@
             });
         });
     </script>
+   
+ 
 </body>
+
 </html>
